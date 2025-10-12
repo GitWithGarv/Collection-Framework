@@ -21,6 +21,7 @@ public class LL {
         Node newnode = new Node(data);
         if (head == null) {
             head = newnode;
+            return;
         } else {
             newnode.next = head;
             head = newnode;
