@@ -56,6 +56,18 @@ public void reverse(){
     head = prev;
 }
 
+public Node recursiveReverse(Node head){
+    if(head == null || head.next == null){
+        return head;
+    }
+
+    Node newHead = recursiveReverse(head.next);
+    head.next.next = head;
+    head.next = null;
+
+    return newHead;
+}
+
     public static void main(String[] args) {
         reverseLL list = new reverseLL();
         list.add(2);
@@ -65,7 +77,7 @@ public void reverse(){
         list.add(4);
 
         list.print();
-        list.reverse();
+        list.head = list.recursiveReverse(list.head);
         list.print();
     }
 }
