@@ -18,7 +18,7 @@ public class arrayQueue {
         }
 
 
-        //enqueue
+        //enqueue - O(1)
         public static void add(int data){
             if(rear == size - 1){
                 System.out.println("The queue is full");
@@ -30,7 +30,7 @@ public class arrayQueue {
         }
 
 
-        //dequeue
+        //dequeue - O(n)
         public static int remove(){
             if(isEmpty()){
                 System.out.println("The queue is empty");
@@ -46,7 +46,7 @@ public class arrayQueue {
         }
 
 
-        //peek
+        //peek - O(n)
         public static int peek(){
             if(isEmpty()){
                 System.out.println("The queue is empty");
